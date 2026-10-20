@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+.pnpm-store/
+
+# install and runtime logs
+*.log
+.plugin-manager/
+
+# editor / OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# local env and secrets — never commit
+.env
+.env.*
+*.pem
+*.key
+credentials*.json

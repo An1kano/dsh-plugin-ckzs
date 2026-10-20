@@ -1,0 +1,19 @@
+# Usage & balance bundle: one Host route plus one composer-dock entry.
+# Optional row config (all fields have defaults in index.js):
+#   currency: CNY | USD          fallback currency when no wallet is readable
+#   accountTtlMs: 60000          balance cache lifetime
+#   usageTtlMs: 20000            cross-session usage cache lifetime
+#   sessionCacheTtlMs: 300000    persisted per-session fold cache lifetime
+#   maxSessions: 200             newest sessions scanned for the month total
+#   peakMultiplier: 2            DeepSeek peak-hour price multiplier
+#   peakPricing: true            set false to always bill the off-peak rate
+#   peakTimeZoneOffsetMinutes: 480
+#   peakRanges: [[540,720],[840,1080]]  Beijing-time peak windows in minutes
+#   pricing: { CNY: { '<model>': { cacheHit, cacheMiss, output } } }
+#            per-1M-token overrides merged over the built-in table
+- insert:
+    - id: usage-stats
+      name: '@an1kano/dsh-usage-stats'
+      config:
+        accountTtlMs: 60000
+        usageTtlMs: 20000

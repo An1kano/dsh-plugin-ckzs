@@ -1,0 +1,6 @@
+{
+  "meta": {
+    "title": "Usage & Balance",
+    "description": "Shows the DeepSeek account balance, this month's usage, and the current session's estimated cost below the composer."
+  }
+}
